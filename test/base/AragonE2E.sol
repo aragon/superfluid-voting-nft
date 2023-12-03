@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-pragma solidity 0.8.17;
+pragma solidity 0.8.19;
 
 import {Vm} from "forge-std/Test.sol";
 import {console2} from "forge-std/console2.sol";
@@ -46,12 +46,12 @@ contract AragonE2E is AragonTest {
 
         vm.createSelectFork(vm.rpcUrl("mainnet"), vm.envOr("FORK_BLOCK", _FORK_BLOCK));
 
-        console2.log("======================== E2E SETUP ======================");
-        console2.log("Forking from: ", vm.envString("FORKING_NETWORK"));
-        console2.log("from block:   ", vm.envOr("FORK_BLOCK", _FORK_BLOCK));
-        console2.log("daoFactory:   ", address(daoFactory));
-        console2.log("repoFactory:  ", address(repoFactory));
-        console2.log("=========================================================");
+        // console2.log("======================== E2E SETUP ======================");
+        // console2.log("Forking from: ", vm.envString("FORKING_NETWORK"));
+        // console2.log("from block:   ", vm.envOr("FORK_BLOCK", _FORK_BLOCK));
+        // console2.log("daoFactory:   ", address(daoFactory));
+        // console2.log("repoFactory:  ", address(repoFactory));
+        // console2.log("=========================================================");
     }
 
     /// @notice Deploys a new PluginRepo with the first version
